@@ -1,27 +1,103 @@
+@import url('../components/main-slider/main-slider.css');
+@import url('../components/product-card/product-card.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@font-face {
+  font-family: ALSGranate sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../public/fonts/ALSGranate-Medium.woff') format('woff'), url('../../public/fonts/ALSGranate-Medium.woff2') format('woff2');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: ALSGranate sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../public/fonts/ALSGranate-Regular.woff') format('woff'), url('../../public/fonts/ALSGranate-Regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: ALSGranate sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../public/fonts/ALSGranate-Light.woff') format('woff'), url('../../public/fonts/ALSGranate-Light.woff2') format('woff2');
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*::selection{
+  background: rgba(60, 26, 112, 0.85);
+}
+
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  max-width: 100vw;
+  font-family: ALSGranate sans-serif;
+  font-weight: 300;
+  scrollbar-gutter: stable;
+}
+
+html, body {
+  @apply flex-1 h-full
+}
+:root {
+  --index: calc(1vh + 1vw);
+}
+#__next {
+  @apply flex-1 h-full flex flex-col text-black justify-between
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  width: 0px;
+  background: #777;
+  border: 3px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0px;
+  background: #ccc;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.16em;
+  text-transform: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.app-container {
+  @apply px-[100px]
 }

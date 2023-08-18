@@ -1,0 +1,15 @@
+.header {
+    @apply flex items-center justify-between py-1.5 z-[110] fixed top-0 left-0 right-0 w-full
+}
+
+
+.header__li {
+    transition: .5s;
+    color: black;
+}
+.header__ul:hover .header__li {
+    filter: blur(5px);
+}
+.header__ul .header__li:hover{
+    filter: blur(0px);
+}
