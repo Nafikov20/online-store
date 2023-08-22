@@ -1,5 +1,5 @@
 "use client";
-import React, {useEffect, useRef, useState} from 'react';
+import React, {MouseEventHandler, useEffect, useRef, useState} from 'react';
 import Image from "next/image";
 import {useDispatch, useSelector} from "react-redux";
 import {addToCart} from "@/redux/cart-reducer";
@@ -14,32 +14,43 @@ interface ProductProps {
     product: ProductCard;
 }
 
+interface Product {
+    id: number;
+    name: string;
+    price: number;
+    quantity?: number;
+}
+
+interface CartState {
+    items: Product[];
+}
 
 const ProductCard = ({ product}: ProductProps )=> {
     // const [activeImage, setActiveImage] = useState('/img/slider1.JPG');
     // const [showIndicators, setShowIndicators] = useState(false);
     const dispatch = useDispatch();
     const cartItems = useSelector((state: RootState) => state.cart.items);
+    const [itemQuantity, setItemQuantity] = useState(0);
 
     const isProductInCart = cartItems.some(item => item.id === product.id);
 
 
-    // const handleImageChange = (newImage: React.SetStateAction<string>) => {
-    //     setActiveImage(newImage);
-    // };
-    //
-    // const handleMouseEnter = () => {
-    //     setShowIndicators(true); // Показать индикаторы при наведении курсора
-    // };
-    //
-    // const handleMouseLeave = () => {
-    //     setShowIndicators(false); // Скрыть индикаторы при убирании курсора
-    // };
-
-
-
     const handleAddToCart = () => {
-        dispatch(addToCart(product));
+        const existingItem = cartItems.find(item => item.id === product.id);
+
+        if (existingItem) {
+            // Обновляем состояние количества товара в корзине
+            setItemQuantity(existingItem.quantity || 0);
+        } else {
+            dispatch(addToCart(product));
+
+            // Обновляем cartItems и сохраняем в localStorage
+            const updatedCartItems = [...cartItems, { ...product, quantity: 1 }];
+            localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+
+            // Обновляем itemQuantity
+            setItemQuantity(1);
+        }
     };
 
     return (
