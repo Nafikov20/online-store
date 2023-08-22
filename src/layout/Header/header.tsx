@@ -9,7 +9,7 @@ import {Logo} from "@/components/logo/logo";
 
 
 export const Header = () => {
-    const headerRef = useRef<HTMLHeadElement>(null)
+    const headerRef = useRef<HTMLHeadElement | null>(null)
 
     const scrollListener = () => {
         window.scrollY > 50 && headerRef.current
