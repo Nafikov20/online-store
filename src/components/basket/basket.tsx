@@ -5,6 +5,7 @@ import {decrementQuantity, incrementQuantity, removeFromCart} from "@/redux/cart
 
 const Basket = () => {
     const cartItems = useSelector((state: RootState) => state.cart.items);
+    console.log(cartItems, 'cartItems')
     const dispatch = useDispatch();
 
     const handleRemoveFromCart = (productId: number) => {
@@ -16,6 +17,11 @@ const Basket = () => {
     };
 
     const handleDecrementQuantity = (productId: number) => {
+        // const item = state.items.find(item => item.id === action.payload);
+        //     if (item && item.quantity && item.quantity > 1) {
+        //         item.quantity -= 1;
+        //         localStorage.setItem('cart', JSON.stringify(state.items));
+        //     }
         dispatch(decrementQuantity(productId));
     };
     return (
