@@ -51,7 +51,7 @@ export const Header = () => {
           <Link href={'/basket'}>
               <div className='flex items-center gap-2'>
                   <div className='cursor-pointer'>basket</div>
-                  <div className='text-amber-800 text-[14px] text-center'>{cartItems.length}</div>
+                  {cartItems.length ? (<div className='text-amber-800 text-[14px] text-center'>{cartItems.length}</div>) : ('')}
               </div>
           </Link>
       </nav>
