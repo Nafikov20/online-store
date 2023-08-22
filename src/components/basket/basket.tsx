@@ -5,7 +5,6 @@ import {decrementQuantity, incrementQuantity, removeFromCart} from "@/redux/cart
 
 const Basket = () => {
     const cartItems = useSelector((state: RootState) => state.cart.items);
-    console.log(cartItems, 'cartItems')
     const dispatch = useDispatch();
 
     const handleRemoveFromCart = (productId: number) => {
@@ -17,20 +16,14 @@ const Basket = () => {
     };
 
     const handleDecrementQuantity = (productId: number) => {
-        // const item = state.items.find(item => item.id === action.payload);
-        //     if (item && item.quantity && item.quantity > 1) {
-        //         item.quantity -= 1;
-        //         localStorage.setItem('cart', JSON.stringify(state.items));
-        //     }
         dispatch(decrementQuantity(productId));
     };
     return (
         <div>
             <div className='flex flex-col'>
                 <h1>Корзина</h1>
-                <ul>
                     {cartItems.map(item => (
-                        <li key={item.id}>
+                        <div key={item.id}>
                             {item.name} - {item.price}
                             {item.quantity && (
                                 <span className='text-blue-700'>Количество: {item.quantity}</span>
@@ -41,9 +34,8 @@ const Basket = () => {
                                 <button onClick={() => handleDecrementQuantity(item.id)}>-</button>
                             </div>
 
-                        </li>
+                        </div>
                     ))}
-                </ul>
             </div>
         </div>
     );

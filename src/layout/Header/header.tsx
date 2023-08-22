@@ -6,10 +6,13 @@ import {NAV_LINKS} from "@/constants/nav-links";
 import {useEffect, useRef} from "react";
 import {ROUTES} from "@/constants/routes-links";
 import {Logo} from "@/components/logo/logo";
+import {useSelector} from "react-redux";
+import {RootState} from "@/redux/store";
 
 
 export const Header = () => {
     const headerRef = useRef<HTMLHeadElement | null>(null)
+    const cartItems = useSelector((state: RootState) => state.cart.items);
 
     const scrollListener = () => {
         window.scrollY > 50 && headerRef.current
@@ -46,7 +49,10 @@ export const Header = () => {
               })}
           </ul>
           <Link href={'/basket'}>
-              <div className='cursor-pointer'>basket</div>
+              <div className='flex items-center gap-2'>
+                  <div className='cursor-pointer'>basket</div>
+                  <div className='text-amber-800 text-[14px] text-center'>{cartItems.length}</div>
+              </div>
           </Link>
       </nav>
     </header>
