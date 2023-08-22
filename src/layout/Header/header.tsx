@@ -11,13 +11,15 @@ import {Logo} from "@/components/logo/logo";
 export const Header = () => {
     const headerRef = useRef<HTMLHeadElement>(null)
 
+    const scrollListener = () => {
+        window.scrollY > 50 && headerRef.current
+            ? headerRef.current.classList.add('bg-white')
+            : headerRef.current?.classList.remove('bg-white')
+    }
 
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            window.scrollY > 50 && headerRef.current
-                ? headerRef.current.classList.add('bg-white')
-                : headerRef.current?.classList.remove('bg-white')
-        })
+        window.addEventListener('scroll', scrollListener);
+            return () => window.removeEventListener('scroll', scrollListener);
     }, []);
 
 
