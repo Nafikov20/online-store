@@ -38,7 +38,7 @@
 }
 
 *::selection{
-  background: rgba(60, 26, 112, 0.85);
+  background: rgba(154, 209, 245, 0.85);
 }
 
 html,
@@ -50,7 +50,7 @@ body {
 }
 
 html, body {
-  @apply flex-1 h-full
+  @apply flex-1 h-full pl-[100px] pr-[100px]
 }
 :root {
   --index: calc(1vh + 1vw);
@@ -100,4 +100,10 @@ input {
 
 .app-container {
   @apply px-[100px]
+}
+
+.ant-select-selector {
+  height: 100%!important;
+  align-items: center!important;
+  border-radius: 0!important;
 }

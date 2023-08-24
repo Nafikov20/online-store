@@ -1,5 +1,6 @@
 import React, { HTMLProps } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 
 import cc from 'classcat';
 
@@ -14,8 +15,7 @@ export const Logo = ({ path, className }: Props) => {
             className={cc([style.logo, className, { 'cursor-default': !path }])}
             href={'/'}
         >
-            <div className={style.logoLeft}>DE LA MANO</div>
-            <div className={style.logoRight}>DE LA MANO</div>
+            <Image  priority  width={120} src={require('../../../public/img/de_la_mano_logo@3x.png')} alt='logo'/>
         </Link>
     );
 };
