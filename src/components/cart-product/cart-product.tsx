@@ -30,7 +30,6 @@ const sizeData = [
 
 const CartProduct = () => {
     const cartItems = useSelector((state: RootState) => state.cart.items);
-    console.log(cartItems)
     const dispatch = useDispatch();
 
     const handleRemoveFromCart = (productId: number) => {
@@ -45,21 +44,22 @@ const CartProduct = () => {
         dispatch(decrementQuantity(productId));
     };
 
+
     return (
         <div className='flex flex-col border-b-[1px] border-[#99badbc6] pb-2.5 w-full'>
             {cartItems.map(item => (
-                <div key={item.id} className="flex gap-2.5 items-center justify-between w-full">
+                <div key={item.id} className="flex mb-2.5 gap-2.5 items-center justify-between w-full">
 
 
                     <div className='flex gap-2.5 items-center'>
                         <Image
                             alt='image cart product'
-                            src={'/img/slider1.JPG'}
+                            src={item.img1}
                             width={80}
                             height={100}
                         />
                         <h3>{item.name}</h3>
-                        <span className='text-zinc-600'>color grey</span>
+                        {/*<span className='text-zinc-600'>color grey</span>*/}
                     </div>
 
 
@@ -94,7 +94,11 @@ const CartProduct = () => {
 
 
                     <div className='flex gap-2.5'>
-                        <h3>{`${(item.price)}`}₽</h3>
+                        <input
+                            type="text"
+                            value={`${(item.price)} ₽`}
+                        />
+
                         <button onClick={() => handleRemoveFromCart(item.id)}>
                             <Icon  width={24} height={24}  name='delete' />
                         </button>

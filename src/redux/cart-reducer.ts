@@ -4,7 +4,10 @@ interface Product {
     id: number;
     name: string;
     price: number;
-    quantity?: number;
+    quantity?: number | undefined;
+    img1: string;
+    img2: string;
+    img3: string;
 }
 
 interface CartState {

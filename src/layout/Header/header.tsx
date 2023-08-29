@@ -20,9 +20,9 @@ const DynamicHeaderCart = dynamic(() => import('../../components/header-cart/hea
 export const Header = () => {
     const headerRef = useRef<HTMLHeadElement | null>(null)
     const scrollListener = () => {
-        window.scrollY > 50 && headerRef.current
-            ? headerRef.current.classList.add('bg-white')
-            : headerRef.current?.classList.remove('bg-white')
+        window.scrollY > 20 && headerRef.current
+            ? headerRef.current.classList.add('bg-white', 'drop-shadow-md')
+            : headerRef.current?.classList.remove('bg-white', 'drop-shadow-md')
     }
 
     useEffect(() => {

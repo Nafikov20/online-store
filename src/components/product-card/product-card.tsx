@@ -10,6 +10,9 @@ interface ProductCard {
     id: number;
     name: string;
     price: number;
+    img1: string;
+    img2: string;
+    img3: string;
 }
 interface ProductProps {
     product: ProductCard;
@@ -20,6 +23,9 @@ interface Product {
     name: string;
     price: number;
     quantity?: number;
+    img1: string;
+    img2: string;
+    img3: string;
 }
 
 interface CartState {
@@ -27,13 +33,14 @@ interface CartState {
 }
 
 const ProductCard = ({ product}: ProductProps )=> {
-    const [activeImage, setActiveImage] = useState('/img/slider1.JPG');
+    const cartItems = useSelector((state: RootState) => state.cart.items);
+    const [activeImage, setActiveImage] = useState(product.img1);
     const [showIndicators, setShowIndicators] = useState(false);
     const [itemQuantity, setItemQuantity] = useState(0);
     const dispatch = useDispatch();
     const router = useRouter()
 
-    const cartItems = useSelector((state: RootState) => state.cart.items);
+
 
     const isProductInCart = cartItems.some(item => item.id === product.id);
 
@@ -80,25 +87,22 @@ const ProductCard = ({ product}: ProductProps )=> {
                             >
                                 <button
                                     onMouseEnter={() =>
-                                        handleImageChange('/img/slider1.JPG')
+                                        handleImageChange(product.img1)
                                     }
-                                    data-id="1"
                                     type="button"
                                     className="image-slider__tab"
                                 ></button>
                                 <button
                                     onMouseEnter={() =>
-                                        handleImageChange('/img/slider2.JPG')
+                                        handleImageChange(product.img2)
                                     }
-                                    data-id="2"
                                     type="button"
                                     className="image-slider__tab"
                                 ></button>
                                 <button
                                     onMouseEnter={() =>
-                                        handleImageChange('/img/slider3.JPG')
+                                        handleImageChange(product.img3)
                                     }
-                                    data-id="3"
                                     type="button"
                                     className="image-slider__tab"
                                 ></button>
@@ -148,22 +152,22 @@ const ProductCard = ({ product}: ProductProps )=> {
                             <div className="products-search-header__text">{product.name}</div>
                             <div className="products-search-header__desc">
                                 <div className="products-search-header__sum">{product.price}₽</div>
-                                <div className="products-search-header__color">
-                                    <span className='bg-[#CDB059]'></span>
-                                    <span className='bg-[#477C88]'></span>
-                                </div>
+                                {/*<div className="products-search-header__color">*/}
+                                {/*    <span className='bg-[#CDB059]'></span>*/}
+                                {/*    <span className='bg-[#477C88]'></span>*/}
+                                {/*</div>*/}
                             </div>
                             <div className="products-search-header__caps">Капсула GI</div>
                         </div>
                         {isProductInCart ? (
                             <button
-                                className='w-auto h-[20px] py-2.5 px-1.5 flex items-center rounded bg-[#db99b7] hover:bg-[#C589A4] text-white font-medium'
+                                className='w-auto h-[20px] py-2.5 px-1.5 flex items-center rounded bg-[#db99b7] hover:bg-[#C589A4] whitespace-nowrap text-white font-medium'
                                 onClick={() => router.push('/cart')}>
                                 Перейти в корзину
                             </button>
                         ) : (
                             <button
-                                className='w-auto h-[20px] py-2.5 px-1.5 flex items-center rounded bg-[#99badb] hover:bg-[#89A7C5] text-white font-medium'
+                                className='w-auto h-[20px] py-2.5 px-1.5 flex items-center rounded bg-[#99badb] hover:bg-[#89A7C5] whitespace-nowrap text-white font-medium'
                                 onClick={handleAddToCart}>
                                 Добавить в корзину
                             </button>

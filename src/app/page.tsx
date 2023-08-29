@@ -1,18 +1,19 @@
 import {MainSlider} from "@/components/main-slider/main-slider";
+import dynamic from 'next/dynamic';
+import {products} from '@/shared/data/product'
 
+const DynamicProductCard = dynamic(() => import('../components/product-card/product-card'), {
+    ssr: false,
+});
 export default function Home() {
     return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <MainSlider />
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi tempore tenetur. Amet, dolores doloribus, enim est et fugiat impedit, magnam non nulla officiis praesentium provident quas quos? Eveniet, impedit?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi tempore tenetur. Amet, dolores doloribus, enim est et fugiat impedit, magnam non nulla officiis praesentium provident quas quos? Eveniet, impedit?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi tempore tenetur. Amet, dolores doloribus, enim est et fugiat impedit, magnam non nulla officiis praesentium provident quas quos? Eveniet, impedit?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi tempore tenetur. Amet, dolores doloribus, enim est et fugiat impedit, magnam non nulla officiis praesentium provident quas quos? Eveniet, impedit?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi tempore tenetur. Amet, dolores doloribus, enim est et fugiat impedit, magnam non nulla officiis praesentium provident quas quos? Eveniet, impedit?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi tempore tenetur. Amet, dolores doloribus, enim est et fugiat impedit, magnam non nulla officiis praesentium provident quas quos? Eveniet, impedit?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi tempore tenetur. Amet, dolores doloribus, enim est et fugiat impedit, magnam non nulla officiis praesentium provident quas quos? Eveniet, impedit?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi tempore tenetur. Amet, dolores doloribus, enim est et fugiat impedit, magnam non nulla officiis praesentium provident quas quos? Eveniet, impedit?
-
+        <div className='grid grid-cols-3 gap-[20px] justify-between'>
+            {products.map(product => (
+                <DynamicProductCard key={product.id} product={product} />
+            ))}
+        </div>
     </main>
   )
 }

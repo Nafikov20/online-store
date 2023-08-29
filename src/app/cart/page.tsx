@@ -12,10 +12,17 @@ export default function Cart() {
     const cartItems = useSelector((state: RootState) => state.cart.items);
 
     return (
-        <div className='flex flex-col items-center justify-center mt-[96px]'>
-            <h1>BASKET</h1>
-            <DynamicCartProduct />
-            <CartForm />
+        <div className='flex flex-col h-full items-center justify-center mt-[96px]'>
+            <h1 className='font-normal mb-4'>Корзина</h1>
+            {cartItems.length ? (
+                <>
+                    <DynamicCartProduct/>
+                    <CartForm/>
+                </>
+            ) : (
+                <div>Корзина пуста</div>
+            )}
+
         </div>
     )
 }
