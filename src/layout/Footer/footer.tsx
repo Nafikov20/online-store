@@ -11,7 +11,7 @@ export const Footer = () => {
          Вдохновение в каждом стежке...
         </span>
           <a href='mailto:snkr.nk95@gmail.com'>snkr.nk95@gmail.com</a>
-          <a href='tel:+7 777 777 77 77'>+7 777 777 77 77</a>
+          <a href='tel:+7 917 857-26-69'>+7 917 857-26-69</a>
       </div>
     </footer>
   );
