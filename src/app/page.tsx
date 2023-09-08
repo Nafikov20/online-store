@@ -1,4 +1,4 @@
-import {MainSlider} from "@/components/main-slider/main-slider";
+// import {MainSlider} from "@/components/main-slider/main-slider";
 import dynamic from 'next/dynamic';
 import {products} from '@/shared/data/product'
 
@@ -8,7 +8,7 @@ const DynamicProductCard = dynamic(() => import('../components/product-card/prod
 export default function Home() {
     return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <MainSlider />
+        {/*<MainSlider />*/}
         <div className='grid grid-cols-3 gap-[20px] justify-between'>
             {products.map(product => (
                 <DynamicProductCard key={product.id} product={product} />

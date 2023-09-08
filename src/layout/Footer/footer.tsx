@@ -10,7 +10,7 @@ export const Footer = () => {
         <span className="text-sm opacity-75">
          Вдохновение в каждом стежке...
         </span>
-          <a href='mailto:snkr.nk95@gmail.com'>snkr.nk95@gmail.com</a>
+          <a href='mailto:de-la-mano@gmail.com'>de-la-mano@gmail.com</a>
           <a href='tel:+7 917 857-26-69'>+7 917 857-26-69</a>
       </div>
     </footer>

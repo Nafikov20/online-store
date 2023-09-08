@@ -3,6 +3,7 @@
     -ms-flex: 0 1 33.3333%;
     flex: 0 1 33.3333%;
     padding: 20px 12px;
+    max-width: 280px;
 }
 
 .products-search-header__image {
