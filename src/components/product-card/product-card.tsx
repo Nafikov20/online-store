@@ -163,13 +163,13 @@ const ProductCard = ({ product}: ProductProps )=> {
                             <button
                                 className='w-auto h-[20px] py-2.5 px-1.5 flex items-center rounded bg-[#db99b7] hover:bg-[#C589A4] whitespace-nowrap text-white font-medium'
                                 onClick={() => router.push('/cart')}>
-                                Перейти в корзину
+                                В корзину
                             </button>
                         ) : (
                             <button
                                 className='w-auto h-[20px] py-2.5 px-1.5 flex items-center rounded bg-[#99badb] hover:bg-[#89A7C5] whitespace-nowrap text-white font-medium'
                                 onClick={handleAddToCart}>
-                                Добавить в корзину
+                                Купить
                             </button>
                         )}
                     </div>

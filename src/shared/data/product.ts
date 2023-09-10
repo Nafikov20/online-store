@@ -19,9 +19,9 @@ export const products = [
         id: 3,
         name: 'Коричневый костюм',
         price: 15980,
-        img1: require('../../../public/img/1-bromn.jpeg'),
-        img2: require('../../../public/img/2-bromn.jpeg'),
-        img3: require('../../../public/img/3-bromn.jpeg'),
+        img1: require('../../../public/img/1-brown.jpeg'),
+        img2: require('../../../public/img/2-brown.jpeg'),
+        img3: require('../../../public/img/3-brown.jpeg'),
     }
     // ...другие товары
 ];
