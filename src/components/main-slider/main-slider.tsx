@@ -16,6 +16,7 @@ import people from "@/shared/data/data";
 export const MainSlider = () => {
 
   return (
+
     <Fragment>
        <section className="section mySwiper mt-[-96px]">
            <Swiper
@@ -32,13 +33,12 @@ export const MainSlider = () => {
                navigation={true}
                modules={[Autoplay, Pagination, Navigation]}
            >
-               {people.map((person: { image: any; name: any; title: any; quote: any; }, personIndex: number) => {
-                   const { image, name, title, quote } = person;
+               {people.map((person: { image: any; name: any; title: any; }, personIndex: number) => {
+                   const { image, name, } = person;
                    return (
                        <SwiperSlide key={personIndex}>
                            <article className='article__slider'>
                                <Image src={image} alt={name} fill={true}  className="person-img" />
-                               <p className="text">{quote}</p>
                            </article>
                        </SwiperSlide>
                    )

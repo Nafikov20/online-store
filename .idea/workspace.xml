@@ -4,38 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c49de2ce-04b1-4f06-9ad6-8eb80a99b50a" name="Changes" comment="" />
+    <list default="true" id="c49de2ce-04b1-4f06-9ad6-8eb80a99b50a" name="Changes" comment="some edits">
+      <change afterPath="$PROJECT_DIR$/public/img/2-beige.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/3-beige.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/silder1.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/1-оливковый-костюм.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/1-oliv.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/1-серый-костюм.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/1-brown.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/2-оливковый-костюм.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/2-oliv.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/2-серый-костюм.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/2-brown.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/3-оливковый-костюм.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/1-beige.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/3-серый-костюм.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/3-brown.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/slider1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main-slider/main-slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-slider/main-slider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/data/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/data/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/data/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/data/product.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2UkIjPMglS3UuHyIGi3Icod98lS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/ilham/Desktop/de_la_mano/de_la_mano",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/Users/ilham/Desktop/de_la_mano/de_la_mano/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ilham/Desktop/de_la_mano/de_la_mano&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/ilham/Desktop/de_la_mano/de_la_mano/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -53,10 +78,29 @@
       <option name="presentableId" value="Default" />
       <updated>1693477286311</updated>
       <workItem from="1693477287759" duration="659000" />
+      <workItem from="1694188127822" duration="1750000" />
+      <workItem from="1694280700374" duration="10000" />
+      <workItem from="1694332324387" duration="1216000" />
+      <workItem from="1694357413703" duration="644000" />
+      <workItem from="1694361839559" duration="2277000" />
     </task>
+    <task id="LOCAL-00001" summary="some edits">
+      <option name="closed" value="true" />
+      <created>1694189689794</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694189689794</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="some edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="some edits" />
   </component>
 </project>
