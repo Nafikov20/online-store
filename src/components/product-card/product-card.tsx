@@ -157,7 +157,7 @@ const ProductCard = ({ product}: ProductProps )=> {
                                 {/*    <span className='bg-[#477C88]'></span>*/}
                                 {/*</div>*/}
                             </div>
-                            <div className="products-search-header__caps">Капсула GI</div>
+                            {/*<div className="products-search-header__caps">Капсула GI</div>*/}
                         </div>
                         {isProductInCart ? (
                             <button

@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c49de2ce-04b1-4f06-9ad6-8eb80a99b50a" name="Changes" comment="some edits">
-      <change afterPath="$PROJECT_DIR$/public/img/3-oliv.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product-card/product-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product-card/product-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/data/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/data/product.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +69,7 @@
       <workItem from="1694332324387" duration="1216000" />
       <workItem from="1694357413703" duration="644000" />
       <workItem from="1694361839559" duration="2277000" />
+      <workItem from="1694424968442" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="some edits">
       <option name="closed" value="true" />
@@ -82,7 +79,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694189689794</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="some edits">
+      <option name="closed" value="true" />
+      <created>1694365576455</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694365576455</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
